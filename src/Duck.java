@@ -2,40 +2,14 @@
 import java.time.LocalDate;
 import java.util.List;
 
-public class Duck extends Animal{
+public class Duck extends Animal implements Flyable, Goable, Swimable{
 
     public Duck(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner) {
         super(name, birthDate, vaccinations, illness, owner);
         //TODO Auto-generated constructor stub
     }
-    @Override
-    protected void wakeup() {
-        System.out.println("Duck wakes up");
-    }
-    @Override
-    protected void eat() {
-        System.out.println("Duck ate");
-    }
-    @Override
-    protected void play() {
-        System.out.println("Duck playing");
-    }
-    @Override
-    protected void sleep() {
-        System.out.println("Duck sleeping");
-    }
-    @Override
-    protected void go() {
-        System.out.println("Duck walking");
-    }
-    @Override
-    protected void fly() {
-        System.out.println("Duck flying");
-    }
-    @Override
-    protected void swim() {
-        System.out.println("Duck swimming");
-    }
+
+
     @Override
     public void lifeCycle() {
         wakeup();
@@ -50,4 +24,18 @@ public class Duck extends Animal{
         sleep();
     }
 
+    @Override
+    public double Flyable() {
+        return 10;
+    }
+
+    @Override
+    public double Go() {
+        return 3;
+    }
+
+    @Override
+    public double Swim() {
+        return 5;
+    }
 }

@@ -14,21 +14,9 @@ public class Main {
                 new ArrayList<>(), "Chumka", "Norbert");
         Duck duck = new Duck("Adolf", LocalDate.of(2016,5,12),
                 new ArrayList<>(), "Polyomavirus", "Boss");
+        Fish fish = new Fish("Pepe", LocalDate.of(2022,3,6),new ArrayList<>(),"Fill", "Me");
+        VeterinaryClinic clinic = new VeterinaryClinic();
+        clinic.addPatients(cat, eagle,eagle,duck,fish);
 
-
-        animals.add(cat);
-        animals.add(eagle);
-        animals.add(snake);
-        animals.add(duck);
-        System.out.println(cat);
-        cat.lifeCycle();
-        System.out.println(animals);
-        cat.lifeCycle();
-        System.out.println();
-        eagle.lifeCycle();
-        System.out.println();
-        snake.lifeCycle();
-        System.out.println();
-        duck.lifeCycle();
     }
 }

@@ -7,6 +7,7 @@ public class Animal {
     protected List<String> vaccinations;
     protected String illness;
     protected String owner;
+    protected String type;
 
     public Animal(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner){
         this.name=name;
@@ -14,6 +15,7 @@ public class Animal {
         this.vaccinations=vaccinations;
         this.illness=illness;
         this.owner=owner;
+        this.type = getClass().getSimpleName();
     }
     public String getName(){
         return name;
