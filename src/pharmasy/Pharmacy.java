@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class Pharmacy {
+public class Pharmacy implements Comparable<Component> {
     private int index;
     private final List<Component> components;
 
@@ -34,5 +34,10 @@ public class Pharmacy {
     @Override
     public boolean equals(Object obj) {
         return this.hashCode() == ((Pharmacy)obj).hashCode();
+    }
+
+    @Override
+    public int compareTo(Component o) {
+        return 0;
     }
 }

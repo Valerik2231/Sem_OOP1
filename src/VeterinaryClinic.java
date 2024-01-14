@@ -1,7 +1,9 @@
 import java.util.*;
 
 public class VeterinaryClinic {
-    private List<Staff> staffs = new ArrayList<>();
+    private List<Doctor> Doctors = new ArrayList<>();
+    private List<Nurse> nurses = new ArrayList<>();
+
     private List<Animal> patients = new ArrayList<>();
 
     public void Add(Animal animal){
@@ -30,5 +32,21 @@ public class VeterinaryClinic {
             if (item instanceof Swimable) result.add((Swimable) item);
         }
         return result;
+    }
+
+    public void AddDoctor(Doctor doctor){
+        Doctors.add(doctor);
+    }
+    public Doctor GetDoctor(){
+        if (Doctors.isEmpty()){
+            return null;
+        }
+        return Doctors.getFirst();
+    }
+    public void AddNurse(Nurse nurse){
+        nurses.add(nurse);
+    }
+    public Nurse GetNurse(){
+        return nurses.getFirst();
     }
 }

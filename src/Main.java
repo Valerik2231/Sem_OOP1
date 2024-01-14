@@ -18,5 +18,15 @@ public class Main {
         VeterinaryClinic clinic = new VeterinaryClinic();
         clinic.addPatients(cat, eagle,eagle,duck,fish);
 
+        Doctor doctor = new Doctor("Ivan", 30);
+        clinic.AddDoctor(doctor);
+        Nurse nurse = new Nurse("Nina", 20);
+        clinic.AddNurse(nurse);
+        nurse.Vaccinating(duck, "AntiGrip");
+        doctor.Inspection(duck);
+
+
+
+
     }
 }
